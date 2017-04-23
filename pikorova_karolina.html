@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="cs">
+    <head>
+        <title>Konfigurace oblastí pro herní svět.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <main>
+            <article>
+                <header>
+                    <h1>Projekt: konfigurace oblastí pro herní svět.</h1>
+                    <p>Zde je napsána dokumentace k projektu. Obsahuje nejdůležitější části pro popis a orientaci v projektu.</p>
+                    <nav>
+                        <h2>Navigace</h2>
+                        <ul>
+                            <li>
+                                <a href="#uvod">Úvod</a>
+                            </li>
+                            <li>
+                                <a href="#metodika">Metodika</a>
+                            </li> 
+                            <li>
+                                <a href="#elementy">Popis elementů/atributů</a>
+                            </li>
+                            <li>
+                                <a href="#transformace">Popis transformace</a>
+                            </li>
+                            <li>
+                                <a href="#zaver">Závěr</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <section>
+                    <h2 id="uvod">Úvod</h2>
+                    <p>Úkolem semestrální práce bylo: Nastavení/konfigurace aplikace (existující/vymyšlená). Vybrala jsem si tu možnost s vymyšlenou aplikací.
+                        Aplikace je počítačová hra s otevřeným světem a já jsem se zaměřila na konfiguraci mapy světa, tedy spíše jednotlivých oblastí tohoto světa.
+                        Vytvořila jsem XML soubor, který obsahuje vše potřebné pro takovou konfiguraci.</p>
+                    <p>V sepsané dokumentaci se věnuji použitým metodikám při tvorbě. Popisuji jednotlivé elementy a atributy pro pochopení fungování.</p>
+                    <p>Tato dokumentace je psána v HTML5 a validita zkontrolována validátorem validator.w3.org.</p>
+                </section>
+                <section>
+                    <h2 id="metodika">Metodika</h2>
+                    <p>Nejprve bylo potřeba vytvořit XML soubor s XML Schema, které nám určuje, jaké elementy/atributy můžeme použít a jak jsou hierarchicky uspořádané. 
+                        Samozřejmě, že se nesmí zapomenout na hodnoty, kterých mohou elementy nabývat. Z XML souboru následovala transformace do JSON. 
+                        Pak sepsání této dokumentace a vložení celého projektu na GitHub.</p>
+                    <p>Celý projekt je vložený na mém profilu na GitHubu a lze se na něj podívat <a href="https://github.com/KajuskaCZ/konfiguraceHernihoSveta">zde.</a></p>
+                    <h3>Použité nástroje</h3>
+                    <p>Následující seznam obsahuje nástroje, které byly použity pro vypracování semestrálního projektu.</p>
+                    <ul>
+                        <li>
+                            <a href="https://validator.w3.org/">validator.w3.org</a>
+                        </li>
+                        <li>
+                            <a href="http://json-validator.com/">JSON Validator.</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/">GitHub</a>
+                        </li>
+                        <li>
+                            internetový prohlížeč IE a Edge
+                        </li>
+                        <li>
+                            NetBeansIDE 8.2
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 id="elementy">Popis elementů/atributů</h2>
+                    <h3>Elementy</h3>
+                    <p>Tabulka popisu elementů použitých pro konfiguraci každé jednotlivé herní oblasti. Obsahuje název elementu, 
+                        krátký popis pro pochopení použití a hodnoty, kterých může element nabývat.</p>
+                    <table>
+                        <tr>
+                            <td>Element</td>
+                            <td>Popis</td>
+                            <td>Hodnoty</td>
+                        </tr>
+                        <tr>
+                            <td>konfigurace_oblasti</td>
+                            <td>úvodní element</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>obecne_nastaveni</td>
+                            <td>obaluje obecné nastavení</td>
+                            <td>-</td>
+                        </tr>
+                          <tr>
+                            <td>max_pocet_oblasti</td>
+                            <td>maximální počet konfigurovaných oblastí</td>
+                            <td>unsigned short</td>
+                        </tr>
+                          <tr>
+                            <td>celkova_rozloha</td>
+                            <td>celková rozloha celé mapy</td>
+                            <td>integer</td>
+                        </tr>
+                          <tr>
+                            <td>zvyrazneni_hranic</td>
+                            <td>zda jsou hranice mezi oblastmi zvýrazněné</td>
+                            <td>boolean</td>
+                        </tr>
+                          <tr>
+                            <td>oblasti</td>
+                            <td>element zastřešuje jednotlivé oblasti</td>
+                            <td>-</td>
+                        </tr>
+                          <tr>
+                            <td>oblast</td>
+                            <td>oblast pro konfiguraci</td>
+                            <td>-</td>
+                        </tr>
+                          <tr>
+                            <td>nastaveni</td>
+                            <td>obal pro jednoduché nastavení</td>
+                            <td>-</td>
+                        </tr>
+                          <tr>
+                            <td>filtr</td>
+                            <td>filrt pro viditelnost v oblasti</td>
+                            <td>přesvětlený, světlý, žádný, tmavý, ztmavený</td>
+                        </tr>
+                          <tr>
+                            <td>viditelnost</td>
+                            <td>jak daleko hráč v oblasti vidí</td>
+                            <td>unsigned short</td>
+                        </tr>
+                          <tr>
+                            <td>pocasi</td>
+                            <td>jaké počasí je v oblasti</td>
+                            <td>slunečno, polojasno, deštivo, větrno, bouřka, sníh</td>
+                        </tr>
+                          <tr>
+                            <td>obloha</td>
+                            <td>textura oblohy</td>
+                            <td>den, noc, slunce, mraky, déšť, sníh, blesky</td>
+                        </tr>
+                          <tr>
+                            <td>rozloha</td>
+                            <td>rozloha dané oblasti</td>
+                            <td>integer</td>
+                        </tr>
+                          <tr>
+                            <td>hudba_playlist</td>
+                            <td>hudba hrající v oblasti</td>
+                            <td>unsigned short</td>
+                        </tr>
+                          <tr>
+                            <td>voda</td>
+                            <td>obal pro nastavení vody</td>
+                            <td>-</td>
+                        </tr>
+                          <tr>
+                            <td>odstin</td>
+                            <td>odstín vody v oblasti</td>
+                            <td>unsigned short</td>
+                        </tr>
+                          <tr>
+                            <td>odraz</td>
+                            <td>zda se vodní hladina odráží</td>
+                            <td>boolean</td>
+                        </tr>
+                          <tr>
+                            <td>kvalita</td>
+                            <td>kvalita textury vody</td>
+                            <td>nízká, střední, vysoká, ultra</td>
+                        </tr>
+                          <tr>
+                            <td>urovne</td>
+                            <td>nastavení úrovní v oblasti</td>
+                            <td>-</td>
+                        </tr>
+                          <tr>
+                            <td>min_uroven</td>
+                            <td>minimální úroveň hráče pro vstup</td>
+                            <td>unsigned short</td>
+                        </tr>
+                          <tr>
+                            <td>min_uroven_nepratel</td>
+                            <td>minimální úroveň nepřátel v oblasti</td>
+                            <td>unsigned short</td>
+                        </tr>
+                          <tr>
+                            <td>max_uroven_nepratel</td>
+                            <td>maximální úroveň nepřátel v oblasti</td>
+                            <td>unsigned short</td>
+                        </tr>
+                          <tr>
+                            <td>frakce_v_oblasti</td>
+                            <td>obal pro nastavení vyskytujících se frakcí v oblasti</td>
+                            <td>-</td>
+                        </tr>
+                          <tr>
+                            <td>frakce</td>
+                            <td>určitá frakce</td>
+                            <td>-</td>
+                        </tr>
+                          <tr>
+                            <td>reputace</td>
+                            <td>reputace s frakcí, se kterou hráč začíná</td>
+                            <td>nenáviděn, nepřátelé, neutrální, přátelé, povýšen, ctěn</td>
+                        </tr>
+                        <tr>
+                            <td>zamereni</td>
+                            <td>zaměření frakce</td>
+                            <td>lučištníci, léčitelé, kouzelníci, váečníci, černokněžníci, rytíři, obecné</td>
+                        </tr>
+                        <tr>
+                            <td>interaktivni_postavy</td>
+                            <td>obal nastavení interaktivních postav v oblasti</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>interaktivni_postava</td>
+                            <td>jednotlivá postava</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>moznost_zabit</td>
+                            <td>zda hráč může s postavou bojovat</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>ukoly</td>
+                            <td>úkoly, které postava může zadat</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>ukol</td>
+                            <td>jednotlivý úkol</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>popis</td>
+                            <td>popis úkolu</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>odmena</td>
+                            <td>odměna z úkolu</td>
+                            <td>string</td>
+                        </tr>
+                         <tr>
+                            <td>skupiny_nepratel</td>
+                            <td>obal pro nastavení skupin nepřátel vyskytujících se v oblasti</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>skupina_nepratel</td>
+                            <td>daná skupina</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>vyskyt</td>
+                            <td>kde se skupina na mapě v oblasti vyskytuje</td>
+                            <td>sever, jih, východ, západ, celá oblast</td>
+                        </tr>
+                        <tr>
+                            <td>min_pocet_jedincu</td>
+                            <td>v jakých skupinkách nepřátele chodí</td>
+                            <td>unsigned short</td>
+                        </tr>
+                        <tr>
+                            <td>min_uroven_nepritele</td>
+                            <td>jakou může mít nepřítel minimální úrověň</td>
+                            <td>unsigned short</td>
+                        </tr>
+                        <tr>
+                            <td>min_typ_odmeny</td>
+                            <td>minimální typ odměny, který lze z nepřítele získat</td>
+                            <td>odpad, normální, střední, vzácná, epická, legendární</td>
+                        </tr>
+                        <tr>
+                            <td>hlavni_nepratele</td>
+                            <td>obal pro nastavení hlavních nepřátel v oblasti</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>hlavni_nepritel</td>
+                            <td>každý jednotlivý hlavní nepřítel</td>
+                            <td>-</td>
+                        </tr>
+                         <tr>
+                            <td>level</td>
+                            <td>úroveň, kterou hlavní nepřítel má</td>
+                            <td>unsigned short</td>
+                        </tr>
+                        <tr>
+                            <td>pozice</td>
+                            <td>kde se nepřítel vyskytuje na mapě</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>souřadnice osy x</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td>souřadnice osy y</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td>souřadnice osy z</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>dohled</td>
+                            <td>na jakou vzdálenost nepřítel zaútočí</td>
+                            <td>unsigned short</td>
+                        </tr>
+                        <tr>
+                            <td>staty</td>
+                            <td>obal pro nastavení statů nepřítele</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>zivoty</td>
+                            <td>počet životů</td>
+                            <td>unsigned short</td>
+                        </tr>
+                        <tr>
+                            <td>pohyblivost</td>
+                            <td>pohyblivost, se kterou nepřítel pracuje</td>
+                            <td>unsigned short</td>
+                        </tr>
+                        <tr>
+                            <td>rychlost_utoku</td>
+                            <td>jak rychle nepřítel může útočit</td>
+                            <td>decimal</td>
+                        </tr>
+                        <tr>
+                            <td>zvlastni_schpnost</td>
+                            <td>popis zvláštní schopnosti nepřítele</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>typ_odmeny</td>
+                            <td>jaká odměna z nepřítele lze dostat</td>
+                            <td>odpad, normální, střední, vzácná, epická, legendární</td>
+                        </tr>
+                        <tr>
+                            <td>poklady</td>
+                            <td>obal pro nastavení pokladů vyskytujících se v oblasti</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>poklad</td>
+                            <td>obal pro daný poklad</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>souboje</td>
+                            <td>obal pro konfiguraci soubojů</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>pvp</td>
+                            <td>zda hráči mohou bojovat mezi sebou</td>
+                            <td>boolaen</td>
+                        </tr>
+                        <tr>
+                            <td>arena</td>
+                            <td>zda se v oblasti nachází arena</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>potrebna_reputace</td>
+                            <td>minimální potřebná reputace, aby frakce útočili na hráče</td>
+                            <td>nenáviděn, nepřátelé, neutrální, přátelé, povýšen, ctěn</td>
+                        </tr>
+                    </table>
+                    <h3>Atributy</h3>
+                    <p>Tabulka popisu atributů použitých pro konfiguraci každé jednotlivé herní oblasti. Obsahuje název atributu, 
+                        krátký popis pro pochopení použití a hodnoty, kterých může atribut nabývat.</p>
+                    <table>
+                        <tr>
+                            <td>Atribut</td>
+                            <td>Popis</td>
+                            <td>Hodnoty</td>
+                        </tr>
+                        <tr>
+                            <td>body_na_zacatek</td>
+                            <td>bonusové body reputace pro hráče na začátek</td>
+                            <td>unsigned short</td>
+                        </tr>
+                        <tr>
+                            <td>id</td>
+                            <td>identifikační číslo</td>
+                            <td>integer</td>
+                        </tr>
+                         <tr>
+                            <td>u_nazev</td>
+                            <td>název úkolu</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>jmeno</td>
+                            <td>jmeno interaktivní postavy či hlavního nepřítele</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>f_nazev</td>
+                            <td>název frakce</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>n_nazev</td>
+                            <td>název skupin nepřátel</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>rychlot_obnovy_zivotu</td>
+                            <td>s jakou rychlostí si hlavní nepřítel obnovuje životy</td>
+                            <td>decimal</td>
+                        </tr>
+                        <tr>
+                            <td>rychlost_obnovy_pohyblivosti</td>
+                            <td>s jakou rychlostí si hlavní nepřítel obnovuje svou pohyblivost</td>
+                            <td>decimal</td>
+                        </tr>
+                        <tr>
+                            <td>zbran</td>
+                            <td>zbraň hlavního nepřítele</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>xp</td>
+                            <td>xp, které hráč dostane</td>
+                            <td>integer</td>
+                        </tr>
+                         <tr>
+                            <td>trida</td>
+                            <td>třída hlavního nepřítele</td>
+                            <td>válečník, lučištník, léčitel, kouzelník, černokněžník, rytíř, žádná</td>
+                        </tr>
+                        <tr>
+                            <td>o_nazev</td>
+                            <td>název oblasti</td>
+                            <td>string</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2 id="transformace">Popis transformace</h2>
+                    <p>Transformace do souboru JSON. Objektem bylo vypsání bossů z jednotlivých herních oblatí s omezením jejich úrovně.</p>
+                    <p>Pomocí dvou vnořených cyklů for-each a podmínky velikosti úrovně se podařilo vygenerovat správný obsah.
+                        Transformace také obsahuje test kontroly, zda je daný údaj poslední pro případné přidání čárky. Takto zachováme správnou syntaxi.</p>
+                    <p>Validita výsledného JSON souboru byla provedena na internetových stránkách <a href="http://json-validator.com/">JSON Validator.</a> 
+                        Výsledek byl pozitivní a proto se dá předokládat správnost transformace do JSON.</p>
+                </section>
+                <section id="zaver">
+                    <h2>Závěr</h2>
+                    <p>Má dřívější práce se značkovacím jazykem XML byla vždy jen zběžná, proto jsem ráda, že je zde tomu věnován prostor. 
+                        Myslím, že práce s XML, XML Schematem a tranformacemi je do budoucna užitečná.</p>
+                    <p></p>
+                </section>
+                <footer>
+                    <p>Autor: Karolína Pikorová, ČZU v Praze 2017</p>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

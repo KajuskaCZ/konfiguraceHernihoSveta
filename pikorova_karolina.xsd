@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:simpleType name="pocasi_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="slunečno|polojasno|deštivo|větrno|bouřka|sníh"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="filtr_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="přesvětlený|světlý|žádný|tmavý|ztmavený"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="obloha_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="den|noc|slunce|mraky|déšť|sníh|blesky"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="kvalita_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="nízká|střední|vysoká|ultra"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="reputace_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="nenáviděn|nepřátelé|neutrální|přátelé|povýšen|ctěn"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="zamereni_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="lučištníci|léčitelé|kouzelníci|váečníci|černokněžníci|rytíři|obecné"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="vyskyt_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="sever|jih|východ|západ|celá oblast"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="typ_odmeny_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="odpad|normální|střední|vzácná|epická|legendární"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="trida_vyber">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="válečník|lučištník|léčitel|kouzelník|černokněžník|rytíř|žádná"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:element name="konfigurace_oblasti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="obecne_nastaveni">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="max_pocet_oblasti" type="xs:unsignedShort"/>
+              <xs:element name="celkova_rozloha" type="xs:integer"/>
+              <xs:element name="zvyrazneni_hranic" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="oblasti">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="oblast" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nastaveni">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="filtr" type="filtr_vyber"/>
+                          <xs:element name="viditelnost" type="xs:unsignedShort"/>
+                          <xs:element name="pocasi">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="pocasi_vyber">
+                                  <xs:attribute name="obloha" type="obloha_vyber"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="rozloha" type="xs:integer"/>
+                          <xs:element name="hudba_playlist" type="xs:unsignedShort"/>
+                          <xs:element name="voda">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="odstin" type="xs:unsignedShort"/>
+                                <xs:element name="odraz" type="xs:boolean"/>
+                                <xs:element name="kvalita" type="kvalita_vyber"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="urovne">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="min_uroven" type="xs:unsignedShort"/>
+                          <xs:element name="min_uroven_nepratel" type="xs:unsignedShort"/>
+                          <xs:element name="max_uroven_nepratel" type="xs:unsignedShort"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="frakce_v_oblasti">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="frakce" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="reputace">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="reputace_vyber">
+                                        <xs:attribute name="body_na_zacatek" type="xs:unsignedShort"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="zamereni" type="zamereni_vyber"/>
+                                <xs:element name="interaktivni_postavy">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="interaktivni_postava" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="moznost_zabit" type="xs:boolean"/>
+                                            <xs:element name="ukoly">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ukol" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="popis" type="xs:string"/>
+                                                        <xs:element name="odmena" type="xs:string"/>
+                                                      </xs:sequence>
+                                                      <xs:attribute name="id" type="xs:integer"/>
+                                                      <xs:attribute name="u_nazev" type="xs:string"/>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="id" type="xs:integer"/>
+                                          <xs:attribute name="jmeno" type="xs:string"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="f_nazev" type="xs:string"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="skupiny_nepratel">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="skupina_nepratel" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="vyskyt" type="vyskyt_vyber"/>
+                                <xs:element name="min_pocet_jedincu" type="xs:unsignedShort"/>
+                                <xs:element name="min_uroven_nepritele" type="xs:unsignedShort"/>
+                                <xs:element name="min_typ_odmeny" type="typ_odmeny_vyber"/>
+                              </xs:sequence>
+                              <xs:attribute name="n_nazev" type="xs:string"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="hlavni_nepratele">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="hlavni_nepritel" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="level" type="xs:unsignedShort"/>
+                                <xs:element name="pozice">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="x" type="xs:integer"/>
+                                      <xs:element name="y" type="xs:integer"/>
+                                      <xs:element name="z" type="xs:integer"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="dohled" type="xs:unsignedShort" />
+                                <xs:element name="staty">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="zivoty">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:unsignedShort">
+                                              <xs:attribute name="rychlot_obnovy_zivotu" type="xs:decimal"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="pohyblivost">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:unsignedShort">
+                                              <xs:attribute name="rychlost_obnovy_pohyblivosti" type="xs:decimal"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="rychlost_utoku" type="xs:decimal"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="zvlastni_schpnost">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="zbran" type="xs:string"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="typ_odmeny">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="typ_odmeny_vyber">
+                                        <xs:attribute name="xp" type="xs:integer"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="id" type="xs:integer"/>
+                              <xs:attribute name="jmeno" type="xs:string"/>
+                              <xs:attribute name="trida" type="trida_vyber"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="poklady">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="poklad" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="pozice">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="x" type="xs:integer"/>
+                                      <xs:element name="y" type="xs:integer"/>
+                                      <xs:element name="z" type="xs:integer"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="typ_odmeny">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="typ_odmeny_vyber">
+                                        <xs:attribute name="xp" type="xs:integer"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="id" type="xs:integer"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="souboje">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="pvp" type="xs:boolean"/>
+                          <xs:element name="arena" type="xs:boolean"/>
+                          <xs:element name="potrebna_reputace" type="reputace_vyber"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:integer"/>
+                  <xs:attribute name="o_nazev" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

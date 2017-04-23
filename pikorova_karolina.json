@@ -1,0 +1,120 @@
+﻿
+        {
+            "Oblasti": [ 
+                {
+                    "ID": "3",
+                    "Název": "Deštivé planiny",
+                    "Bossové": [ 
+                        {
+                            "ID": "4",
+                            "Jméno": "Jožin",
+                            "Třída": "válečník",
+                            "Úrověň": "30",
+                            "Dohled": "15",
+                            "Životy": "450",
+                            "Pohyblivost": "90",
+                            "Rychlost útoku": "0.5",
+                            "Zbraň": "žádná",
+                            "Zvláštní schopnost": "úskok",
+                            "XP": "450",
+                            "Typ odměny": "epická"
+                        } 
+                    ]
+                } ,
+                {
+                    "ID": "5",
+                    "Název": "Ledová skaliska",
+                    "Bossové": [ 
+                        {
+                            "ID": "7",
+                            "Jméno": "Ten Jezdec",
+                            "Třída": "kouzelník",
+                            "Úrověň": "51",
+                            "Dohled": "25",
+                            "Životy": "700",
+                            "Pohyblivost": "95",
+                            "Rychlost útoku": "0.7",
+                            "Zbraň": "mocný magický meč",
+                            "Zvláštní schopnost": "modrý blesk",
+                            "XP": "800",
+                            "Typ odměny": "legendární"
+                        } 
+                    ]
+                } ,
+                {
+                    "ID": "2",
+                    "Název": "Nejčarovnější les",
+                    "Bossové": [ 
+                        {
+                            "ID": "3",
+                            "Jméno": "Obr Necimr",
+                            "Třída": "válečník",
+                            "Úrověň": "20",
+                            "Dohled": "24",
+                            "Životy": "350",
+                            "Pohyblivost": "75",
+                            "Rychlost útoku": "0.4",
+                            "Zbraň": "kyj",
+                            "Zvláštní schopnost": "děsivý řev",
+                            "XP": "500",
+                            "Typ odměny": "vzácná"
+                        } 
+                    ]
+                } ,
+                {
+                    "ID": "1",
+                    "Název": "Staré město",
+                    "Bossové": [ 
+                        {
+                            "ID": "2",
+                            "Jméno": "Daurelis",
+                            "Třída": "černokněžník",
+                            "Úrověň": "10",
+                            "Dohled": "19",
+                            "Životy": "200",
+                            "Pohyblivost": "85",
+                            "Rychlost útoku": "0.2",
+                            "Zbraň": "temná magická hůl",
+                            "Zvláštní schopnost": "ledový hrot",
+                            "XP": "300",
+                            "Typ odměny": "střední"
+                        } 
+                    ]
+                } ,
+                {
+                    "ID": "4",
+                    "Název": "Vždy zlatý kraj",
+                    "Bossové": [ 
+                        {
+                            "ID": "5",
+                            "Jméno": "Olgoj Chorchoj",
+                            "Třída": "válečník",
+                            "Úrověň": "45",
+                            "Dohled": "30",
+                            "Životy": "550",
+                            "Pohyblivost": "93",
+                            "Rychlost útoku": "0.6",
+                            "Zbraň": "žádná",
+                            "Zvláštní schopnost": "červí stisk",
+                            "XP": "550",
+                            "Typ odměny": "legendární"
+                        } ,
+                        {
+                            "ID": "6",
+                            "Jméno": "Skorpioon",
+                            "Třída": "válečník",
+                            "Úrověň": "45",
+                            "Dohled": "25",
+                            "Životy": "600",
+                            "Pohyblivost": "70",
+                            "Rychlost útoku": "0.5",
+                            "Zbraň": "žádná",
+                            "Zvláštní schopnost": "přímé bodnutí",
+                            "XP": "600",
+                            "Typ odměny": "epická"
+                        } 
+                    ]
+                } 
+            ]
+        }
+    

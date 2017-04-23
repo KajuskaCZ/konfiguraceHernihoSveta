@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Odkaz na projekt uložený na GitHub: https://github.com/KajuskaCZ/konfiguraceHernihoSveta -->
+<konfigurace_oblasti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pikorova_karolina.xsd">
+    <obecne_nastaveni>
+        <max_pocet_oblasti>7</max_pocet_oblasti>
+        <celkova_rozloha>9200</celkova_rozloha>
+        <zvyrazneni_hranic>false</zvyrazneni_hranic>
+    </obecne_nastaveni>
+    <oblasti>
+        <oblast id="1" o_nazev="Staré město">
+            <nastaveni>
+                <filtr>žádný</filtr>
+                <viditelnost>50</viditelnost>
+                <pocasi obloha="mraky">polojasno</pocasi>
+                <rozloha>800</rozloha>
+                <hudba_playlist>8</hudba_playlist>
+                <voda>
+                    <odstin>1</odstin>
+                    <odraz>false</odraz>
+                    <kvalita>střední</kvalita>
+                </voda>
+            </nastaveni>
+            <urovne>
+                <min_uroven>1</min_uroven>
+                <min_uroven_nepratel>1</min_uroven_nepratel>
+                <max_uroven_nepratel>10</max_uroven_nepratel>
+            </urovne>
+            <frakce_v_oblasti>
+                <frakce f_nazev="Železní">
+                    <reputace body_na_zacatek="0">přátelé</reputace>
+                    <zamereni>obecné</zamereni>
+                    <interaktivni_postavy>
+                        <interaktivni_postava id="5" jmeno="Zeus">
+                            <moznost_zabit>false</moznost_zabit>
+                            <ukoly>
+                                <ukol id="1" u_nazev="Zlatý prsten">
+                                    <popis>Ve staré truhle v mém dřívějším domově jsem zapomněl svůj drahocený prsten. Přines mi ho a dám Ti odměnu.</popis>
+                                    <odmena>Mědený prsten</odmena>
+                                </ukol>
+                                <ukol id="2" u_nazev="Kovář">
+                                    <popis>Mým společníkem, jak jsi již jistě zjistil, je kovář Serpis. Poptej se ho na nejlepší zbroje v kraji.</popis>
+                                    <odmena>Železné kalhoty s vyrytým znakem</odmena>
+                                </ukol>
+                                <ukol id="3" u_nazev="Polévka">
+                                    <popis>Přines pět prasečích ocásků.</popis>
+                                    <odmena>Vepřová polévka</odmena>
+                                </ukol>
+                            </ukoly>
+                        </interaktivni_postava>
+                    </interaktivni_postavy>
+                </frakce>
+            </frakce_v_oblasti>
+            <skupiny_nepratel>
+                <skupina_nepratel n_nazev="Jezdci">
+                    <vyskyt>sever</vyskyt>
+                    <min_pocet_jedincu>3</min_pocet_jedincu>
+                    <min_uroven_nepritele>4</min_uroven_nepritele>
+                    <min_typ_odmeny>střední</min_typ_odmeny>
+                </skupina_nepratel>
+                <skupina_nepratel n_nazev="Potulná zvěř">
+                    <vyskyt>celá oblast</vyskyt>
+                    <min_pocet_jedincu>1</min_pocet_jedincu>
+                    <min_uroven_nepritele>1</min_uroven_nepritele>
+                    <min_typ_odmeny>normální</min_typ_odmeny>
+                </skupina_nepratel>
+            </skupiny_nepratel>
+            <hlavni_nepratele>
+                <hlavni_nepritel id="1" jmeno="Borgah" trida="válečník">
+                    <level>9</level>
+                    <pozice>
+                        <x>100</x>
+                        <y>20</y>
+                        <z>50</z>
+                    </pozice>
+                    <dohled>12</dohled>
+                    <staty>
+                        <zivoty rychlot_obnovy_zivotu="0.2">150</zivoty>
+                        <pohyblivost rychlost_obnovy_pohyblivosti="0.5">70</pohyblivost>
+                        <rychlost_utoku>0.2</rychlost_utoku>
+                    </staty>
+                    <zvlastni_schpnost zbran="žádná">vrh balvanem</zvlastni_schpnost>
+                    <typ_odmeny xp="250">normální</typ_odmeny>
+                </hlavni_nepritel>
+                <hlavni_nepritel id="2" jmeno="Daurelis" trida="černokněžník">
+                    <level>10</level>
+                    <pozice>
+                        <x>25</x>
+                        <y>325</y>
+                        <z>45</z>
+                    </pozice>
+                    <dohled>19</dohled>
+                    <staty>
+                        <zivoty rychlot_obnovy_zivotu="0.5">200</zivoty>
+                        <pohyblivost rychlost_obnovy_pohyblivosti="0.5">85</pohyblivost>
+                        <rychlost_utoku>0.2</rychlost_utoku>
+                    </staty>
+                    <zvlastni_schpnost zbran="temná magická hůl">ledový hrot</zvlastni_schpnost>
+                    <typ_odmeny xp="300">střední</typ_odmeny>
+                </hlavni_nepritel>
+            </hlavni_nepratele>
+            <poklady>
+                <poklad id="250">
+                    <pozice>
+                        <x>0</x>
+                        <y>200</y>
+                        <z>25</z>
+                    </pozice>
+                    <typ_odmeny xp="20">střední</typ_odmeny>
+                </poklad>
+                <poklad id="251">
+                    <pozice>
+                        <x>348</x>
+                        <y>526</y>
+                        <z>40</z>
+                    </pozice>
+                    <typ_odmeny xp="50">vzácná</typ_odmeny>
+                </poklad>
+                <poklad id="252">
+                    <pozice>
+                        <x>250</x>
+                        <y>654</y>
+                        <z>60</z>
+                    </pozice>
+                    <typ_odmeny xp="50">vzácná</typ_odmeny>
+                </poklad>
+            </poklady>
+            <souboje>
+                <pvp>false</pvp>
+                <arena>true</arena>
+                <potrebna_reputace>nenáviděn</potrebna_reputace>
+            </souboje>
+        </oblast>
+        <oblast id="2" o_nazev="Nejčarovnější les">
+            <nastaveni>
+                <filtr>tmavý</filtr>
+                <viditelnost>40</viditelnost>
+                <pocasi obloha="slunce">polojasno</pocasi>
+                <rozloha>600</rozloha>
+                <hudba_playlist>6</hudba_playlist>
+                <voda>
+                    <odstin>2</odstin>
+                    <odraz>false</odraz>
+                    <kvalita>střední</kvalita>
+                </voda>
+            </nastaveni>
+            <urovne>
+                <min_uroven>10</min_uroven>
+                <min_uroven_nepratel>10</min_uroven_nepratel>
+                <max_uroven_nepratel>20</max_uroven_nepratel>
+            </urovne>
+            <frakce_v_oblasti>
+                <frakce f_nazev="Elfové">
+                    <reputace body_na_zacatek="0">přátelé</reputace>
+                    <zamereni>lučištníci</zamereni>
+                    <interaktivni_postavy>
+                        <interaktivni_postava id="7" jmeno="Mirime">
+                            <moznost_zabit>false</moznost_zabit>
+                            <ukoly>
+                                <ukol id="4" u_nazev="Jasnovidec">
+                                    <popis>Zjisti, kdo škodí elfům v jejich lesním domově.</popis>
+                                    <odmena>Toulec a deset šípů s železným hrotem</odmena>
+                                </ukol>
+                            </ukoly>
+                        </interaktivni_postava>
+                    </interaktivni_postavy>
+                </frakce>
+                <frakce f_nazev="Dryády">
+                    <reputace body_na_zacatek="500">neutrální</reputace>
+                    <zamereni>léčitelé</zamereni>
+                    <interaktivni_postavy>
+                        <interaktivni_postava id="8" jmeno="Laticia">
+                            <moznost_zabit>false</moznost_zabit>
+                            <ukoly>
+                                <ukol id="5" u_nazev="Kouzlo lesa">
+                                    <popis>Prozkoumej ještě nikým neprobádané jižní části lesa. Dej si však velký pozor. Proslýchá se, že tam žije nevídané.</popis>
+                                    <odmena>Pět zlatých</odmena>
+                                </ukol>
+                            </ukoly>
+                        </interaktivni_postava>
+                    </interaktivni_postavy>
+                </frakce>
+            </frakce_v_oblasti>
+            <skupiny_nepratel>
+                <skupina_nepratel n_nazev="Jezdci">
+                    <vyskyt>východ</vyskyt>
+                    <min_pocet_jedincu>5</min_pocet_jedincu>
+                    <min_uroven_nepritele>13</min_uroven_nepritele>
+                    <min_typ_odmeny>vzácná</min_typ_odmeny>
+                </skupina_nepratel>
+                <skupina_nepratel n_nazev="Lesní zvěř">
+                    <vyskyt>celá oblast</vyskyt>
+                    <min_pocet_jedincu>1</min_pocet_jedincu>
+                    <min_uroven_nepritele>10</min_uroven_nepritele>
+                    <min_typ_odmeny>střední</min_typ_odmeny>
+                </skupina_nepratel>
+                <skupina_nepratel n_nazev="Zbojníci">
+                    <vyskyt>celá oblast</vyskyt>
+                    <min_pocet_jedincu>2</min_pocet_jedincu>
+                    <min_uroven_nepritele>10</min_uroven_nepritele>
+                    <min_typ_odmeny>střední</min_typ_odmeny>
+                </skupina_nepratel>
+                <skupina_nepratel n_nazev="Zelení goblini">
+                    <vyskyt>jih</vyskyt>
+                    <min_pocet_jedincu>3</min_pocet_jedincu>
+                    <min_uroven_nepritele>11</min_uroven_nepritele>
+                    <min_typ_odmeny>vzácná</min_typ_odmeny>
+                </skupina_nepratel>
+            </skupiny_nepratel>
+            <hlavni_nepratele>
+                <hlavni_nepritel id="3" jmeno="Obr Necimr" trida="válečník">
+                    <level>20</level>
+                    <pozice>
+                        <x>150</x>
+                        <y>580</y>
+                        <z>39</z>
+                    </pozice>
+                    <dohled>24</dohled>
+                    <staty>
+                        <zivoty rychlot_obnovy_zivotu="0.4">350</zivoty>
+                        <pohyblivost rychlost_obnovy_pohyblivosti="0.4">75</pohyblivost>
+                        <rychlost_utoku>0.4</rychlost_utoku>
+                    </staty>
+                    <zvlastni_schpnost zbran="kyj">děsivý řev</zvlastni_schpnost>
+                    <typ_odmeny xp="500">vzácná</typ_odmeny>
+                </hlavni_nepritel>
+            </hlavni_nepratele>
+            <poklady>
+                <poklad id="253">
+                    <pozice>
+                        <x>5</x>
+                        <y>199</y>
+                        <z>57</z>
+                    </pozice>
+                    <typ_odmeny xp="90">vzácná</typ_odmeny>
+                </poklad>
+                <poklad id="254">
+                    <pozice>
+                        <x>588</x>
+                        <y>423</y>
+                        <z>45</z>
+                    </pozice>
+                    <typ_odmeny xp="105">vzácná</typ_odmeny>
+                </poklad>
+            </poklady>
+            <souboje>
+                <pvp>false</pvp>
+                <arena>false</arena>
+                <potrebna_reputace>nepřátelé</potrebna_reputace>
+            </souboje>
+        </oblast>
+        <oblast id="3" o_nazev="Deštivé planiny">
+            <nastaveni>
+                <filtr>ztmavený</filtr>
+                <viditelnost>15</viditelnost>
+                <pocasi obloha="noc">deštivo</pocasi>
+                <rozloha>700</rozloha>
+                <hudba_playlist>5</hudba_playlist>
+                <voda>
+                    <odstin>3</odstin>
+                    <odraz>true</odraz>
+                    <kvalita>vysoká</kvalita>
+                </voda>
+            </nastaveni>
+            <urovne>
+                <min_uroven>20</min_uroven>
+                <min_uroven_nepratel>21</min_uroven_nepratel>
+                <max_uroven_nepratel>30</max_uroven_nepratel>
+            </urovne>
+            <frakce_v_oblasti>
+                <frakce f_nazev="Kočovní zběsilci">
+                    <reputace body_na_zacatek="250">neutrální</reputace>
+                    <zamereni>obecné</zamereni>
+                    <interaktivni_postavy>
+                        <interaktivni_postava id="9" jmeno="Pazley">
+                            <moznost_zabit>true</moznost_zabit>
+                            <ukoly>
+                                <ukol id="6" u_nazev="Doprovod">
+                                    <popis>Bohům deště se nezavděčíš. Však nevidím ani na krok! Doprovoď nás v bezpečí do vedlejšího města.</popis>
+                                    <odmena>Dva zlatý, železná zbroj a kožené boty</odmena>
+                                </ukol>
+                            </ukoly>
+                        </interaktivni_postava>
+                        <interaktivni_postava id="10" jmeno="Sasley">
+                            <moznost_zabit>true</moznost_zabit>
+                            <ukoly>
+                                <ukol id="7" u_nazev="Havěť">
+                                    <popis>Zbav mě těch otravných hmyzáků.</popis>
+                                    <odmena>Deset zlatých a železná ramena</odmena>
+                                </ukol>
+                            </ukoly>
+                        </interaktivni_postava>
+                    </interaktivni_postavy>
+                </frakce>
+            </frakce_v_oblasti>
+            <skupiny_nepratel>
+                <skupina_nepratel n_nazev="Jezdci">
+                    <vyskyt>západ</vyskyt>
+                    <min_pocet_jedincu>5</min_pocet_jedincu>
+                    <min_uroven_nepritele>27</min_uroven_nepritele>
+                    <min_typ_odmeny>epická</min_typ_odmeny>
+                </skupina_nepratel>
+                <skupina_nepratel n_nazev="Hmyz">
+                    <vyskyt>celá oblast</vyskyt>
+                    <min_pocet_jedincu>1</min_pocet_jedincu>
+                    <min_uroven_nepritele>21</min_uroven_nepritele>
+                    <min_typ_odmeny>vzácná</min_typ_odmeny>
+                </skupina_nepratel>
+                <skupina_nepratel n_nazev="Náměsíční">
+                    <vyskyt>sever</vyskyt>
+                    <min_pocet_jedincu>3</min_pocet_jedincu>
+                    <min_uroven_nepritele>25</min_uroven_nepritele>
+                    <min_typ_odmeny>vzácná</min_typ_odmeny>
+                </skupina_nepratel>
+            </skupiny_nepratel>
+            <hlavni_nepratele>
+                <hlavni_nepritel id="4" jmeno="Jožin" trida="válečník">
+                    <level>30</level>
+                    <pozice>
+                        <x>602</x>
+                        <y>350</y>
+                        <z>40</z>
+                    </pozice>
+                    <dohled>15</dohled>
+                    <staty>
+                        <zivoty rychlot_obnovy_zivotu="0.4">450</zivoty>
+                        <pohyblivost rychlost_obnovy_pohyblivosti="0.6">90</pohyblivost>
+                        <rychlost_utoku>0.5</rychlost_utoku>
+                    </staty>
+                    <zvlastni_schpnost zbran="žádná">úskok</zvlastni_schpnost>
+                    <typ_odmeny xp="450">epická</typ_odmeny>
+                </hlavni_nepritel>
+            </hlavni_nepratele>
+            <poklady>
+                <poklad id="255">
+                    <pozice>
+                        <x>120</x>
+                        <y>650</y>
+                        <z>40</z>
+                    </pozice>
+                    <typ_odmeny xp="150">vzácná</typ_odmeny>
+                </poklad>
+                <poklad id="256">
+                    <pozice>
+                        <x>504</x>
+                        <y>120</y>
+                        <z>42</z>
+                    </pozice>
+                    <typ_odmeny xp="200">epická</typ_odmeny>
+                </poklad>
+            </poklady>
+            <souboje>
+                <pvp>true</pvp>
+                <arena>false</arena>
+                <potrebna_reputace>nepřátelé</potrebna_reputace>
+            </souboje>
+        </oblast>
+        <oblast id="4" o_nazev="Vždy zlatý kraj">
+           <nastaveni>
+               <filtr>světlý</filtr>
+               <viditelnost>60</viditelnost>
+               <pocasi obloha="slunce">slunečno</pocasi>
+               <rozloha>550</rozloha>
+               <hudba_playlist>3</hudba_playlist>
+               <voda>
+                   <odstin>4</odstin>
+                   <odraz>true</odraz>
+                   <kvalita>ultra</kvalita>
+               </voda>
+           </nastaveni>
+           <urovne>
+               <min_uroven>30</min_uroven>
+               <min_uroven_nepratel>30</min_uroven_nepratel>
+               <max_uroven_nepratel>45</max_uroven_nepratel>
+           </urovne>
+           <frakce_v_oblasti>
+               <frakce f_nazev="Džinové">
+                   <reputace body_na_zacatek="150">neutrální</reputace>
+                   <zamereni>kouzelníci</zamereni>
+                   <interaktivni_postavy>
+                       <interaktivni_postava id="11" jmeno="Aell">
+                           <moznost_zabit>true</moznost_zabit>
+                           <ukoly>
+                               <ukol id="8" u_nazev="Čas">
+                                   <popis>Vítej na těch sluncem nejzalitějších místech. Vyprahlé pouště. Nechápu jak, ale ztrácí se mi písek v mých přesípacích hodinách.
+                                    Najdi ten nejvytříbenější a přines ho tolik jako na pět hodin.</popis>
+                                   <odmena>Dvacet zlatých, propustka do hor a zaklínadlo na meč</odmena>
+                               </ukol>
+                           </ukoly>
+                       </interaktivni_postava>
+                   </interaktivni_postavy>
+               </frakce>
+               <frakce f_nazev="Pravý neživí">
+                   <reputace body_na_zacatek="0">nepřátelé</reputace>
+                   <zamereni>černokněžníci</zamereni>
+                   <interaktivni_postavy>
+                       <interaktivni_postava id="12" jmeno="Gilian">
+                           <moznost_zabit>true</moznost_zabit>
+                           <ukoly>
+                               <ukol id="9" u_nazev="Kosti">
+                                   <popis>Pomoz mi získat z hrobů mých společníků vzácné předměty.</popis>
+                                   <odmena>Patnáct zlatých a plášť</odmena>
+                               </ukol>
+                           </ukoly>
+                       </interaktivni_postava>
+                   </interaktivni_postavy>
+               </frakce>
+           </frakce_v_oblasti>
+           <skupiny_nepratel>
+               <skupina_nepratel n_nazev="Jezdci">
+                   <vyskyt>jih</vyskyt>
+                   <min_pocet_jedincu>5</min_pocet_jedincu>
+                   <min_uroven_nepritele>40</min_uroven_nepritele>
+                   <min_typ_odmeny>epická</min_typ_odmeny>
+               </skupina_nepratel>
+               <skupina_nepratel n_nazev="Červi">
+                   <vyskyt>celá oblast</vyskyt>
+                   <min_pocet_jedincu>1</min_pocet_jedincu>
+                   <min_uroven_nepritele>31</min_uroven_nepritele>
+                   <min_typ_odmeny>epická</min_typ_odmeny>
+               </skupina_nepratel>
+           </skupiny_nepratel>
+           <hlavni_nepratele>
+               <hlavni_nepritel id="5" jmeno="Olgoj Chorchoj" trida="válečník">
+                   <level>45</level>
+                   <pozice>
+                       <x>250</x>
+                       <y>480</y>
+                       <z>50</z>
+                   </pozice>
+                   <dohled>30</dohled>
+                   <staty>
+                       <zivoty rychlot_obnovy_zivotu="0.3">550</zivoty>
+                       <pohyblivost rychlost_obnovy_pohyblivosti="0.5">93</pohyblivost>
+                       <rychlost_utoku>0.6</rychlost_utoku>
+                   </staty>
+                   <zvlastni_schpnost zbran="žádná">červí stisk</zvlastni_schpnost>
+                   <typ_odmeny xp="550">legendární</typ_odmeny>
+               </hlavni_nepritel>
+               <hlavni_nepritel id="6" jmeno="Skorpioon" trida="válečník">
+                   <level>45</level>
+                   <pozice>
+                       <x>300</x>
+                       <y>5</y>
+                       <z>55</z>
+                   </pozice>
+                   <dohled>25</dohled>
+                   <staty>
+                       <zivoty rychlot_obnovy_zivotu="0.4">600</zivoty>
+                       <pohyblivost rychlost_obnovy_pohyblivosti="0.5">70</pohyblivost>
+                       <rychlost_utoku>0.5</rychlost_utoku>
+                   </staty>
+                   <zvlastni_schpnost zbran="žádná">přímé bodnutí</zvlastni_schpnost>
+                   <typ_odmeny xp="600">epická</typ_odmeny>
+               </hlavni_nepritel>
+           </hlavni_nepratele>
+           <poklady>
+               <poklad id="257">
+                   <pozice>
+                       <x>140</x>
+                       <y>2</y>
+                       <z>55</z>
+                   </pozice>
+                   <typ_odmeny xp="450">epická</typ_odmeny>
+               </poklad>
+               <poklad id="258">
+                   <pozice>
+                       <x>456</x>
+                       <y>15</y>
+                       <z>20</z>
+                   </pozice>
+                   <typ_odmeny xp="500">legendární</typ_odmeny>
+               </poklad>
+               <poklad id="259">
+                   <pozice>
+                       <x>5</x>
+                       <y>85</y>
+                       <z>57</z>
+                   </pozice>
+                   <typ_odmeny xp="450">epická</typ_odmeny>
+               </poklad>
+           </poklady>
+           <souboje>
+               <pvp>true</pvp>
+               <arena>false</arena>
+               <potrebna_reputace>nepřátelé</potrebna_reputace>
+           </souboje>
+       </oblast>
+       <oblast id="5" o_nazev="Ledová skaliska">
+           <nastaveni>
+               <filtr>přesvětlený</filtr>
+               <viditelnost>55</viditelnost>
+               <pocasi obloha="sníh">větrno</pocasi>
+               <rozloha>650</rozloha>
+               <hudba_playlist>14</hudba_playlist>
+               <voda>
+                   <odstin>5</odstin>
+                   <odraz>false</odraz>
+                   <kvalita>vysoká</kvalita>
+               </voda>
+           </nastaveni>
+           <urovne>
+               <min_uroven>45</min_uroven>
+               <min_uroven_nepratel>46</min_uroven_nepratel>
+               <max_uroven_nepratel>51</max_uroven_nepratel>
+           </urovne>
+           <frakce_v_oblasti>
+               <frakce f_nazev="Moudří starci">
+                   <reputace body_na_zacatek="0">neutrální</reputace>
+                   <zamereni>kouzelníci</zamereni>
+                   <interaktivni_postavy>
+                       <interaktivni_postava id="13" jmeno="Kmetilius">
+                           <moznost_zabit>false</moznost_zabit>
+                           <ukoly>
+                               <ukol id="10" u_nazev="Síla ledu">
+                                   <popis>Brrr, to je zima. Stala se mi taková věc. No... Vážně jsem v tom ledu zmrznul. Najdeš mou starou knihu zaříkadel?</popis>
+                                   <odmena>Meč</odmena>
+                               </ukol>
+                           </ukoly>
+                       </interaktivni_postava>
+                       <interaktivni_postava id="14" jmeno="Tristanis">
+                           <moznost_zabit>false</moznost_zabit>
+                           <ukoly>
+                               <ukol id="10" u_nazev="Menší pomoc">
+                                   <popis>Pokud chceš opravdu najít a porazit pána Jezdců. Pomoz mi, mám tu menší trable.</popis>
+                                   <odmena>Mapa</odmena>
+                               </ukol>
+                           </ukoly>
+                       </interaktivni_postava>
+                   </interaktivni_postavy>
+               </frakce>
+           </frakce_v_oblasti>
+           <skupiny_nepratel>
+               <skupina_nepratel n_nazev="Jezdci">
+                   <vyskyt>celá oblast</vyskyt>
+                   <min_pocet_jedincu>5</min_pocet_jedincu>
+                   <min_uroven_nepritele>46</min_uroven_nepritele>
+                   <min_typ_odmeny>epická</min_typ_odmeny>
+               </skupina_nepratel>
+           </skupiny_nepratel>
+           <hlavni_nepratele>
+               <hlavni_nepritel id="7" jmeno="Ten Jezdec" trida="kouzelník">
+                   <level>51</level>
+                   <pozice>
+                       <x>640</x>
+                       <y>620</y>
+                       <z>65</z>
+                   </pozice>
+                   <dohled>25</dohled>
+                   <staty>
+                       <zivoty rychlot_obnovy_zivotu="0.5">700</zivoty>
+                       <pohyblivost rychlost_obnovy_pohyblivosti="0.7">95</pohyblivost>
+                       <rychlost_utoku>0.7</rychlost_utoku>
+                   </staty>
+                   <zvlastni_schpnost zbran="mocný magický meč">modrý blesk</zvlastni_schpnost>
+                   <typ_odmeny xp="800">legendární</typ_odmeny>
+               </hlavni_nepritel>
+           </hlavni_nepratele>
+           <poklady>
+               <poklad id="260">
+                   <pozice>
+                       <x>3</x>
+                       <y>250</y>
+                       <z>62</z>
+                   </pozice>
+                   <typ_odmeny xp="500">legendární</typ_odmeny>
+               </poklad>
+           </poklady>
+           <souboje>
+               <pvp>true</pvp>
+               <arena>true</arena>
+               <potrebna_reputace>nepřátelé</potrebna_reputace>
+           </souboje>
+       </oblast> 
+    </oblasti>
+</konfigurace_oblasti>
